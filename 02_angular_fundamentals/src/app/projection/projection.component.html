@@ -1,0 +1,11 @@
+<h1>Projection</h1>
+
+<div *ngFor="let user of users">
+  <app-collapsible [title]="user.firstname + ' ' + user.lastname">
+    <ul>
+      <li>Car: {{ user.car ? 'Yes' : 'No' }}</li>
+      <li>Motocycle: {{ user.motorcicle ? 'Yes' : 'No' }}</li>
+      <li>Bicycle: {{ user.bicycle ? 'Yes' : 'No' }}</li>
+    </ul>
+  </app-collapsible>
+</div>
