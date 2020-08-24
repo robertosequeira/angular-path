@@ -1,7 +1,13 @@
 <div>
-  <h4>{{ title }}</h4>
+  <h4>
+    <!--
+      Here a attribute selector is being used to avoid conflicts.
+      [my-atrribute] is safer that .my-class  or #my-id
+    -->
+    <ng-content select="[col-title]"></ng-content>
+  </h4>
 
-  <ng-content *ngIf="visible"></ng-content>
+  <ng-content *ngIf="visible" select="[col-body]"></ng-content>
 
   <button (click)="toggle()">{{ visible ? 'Less...' : 'More...' }}</button>
   <hr>

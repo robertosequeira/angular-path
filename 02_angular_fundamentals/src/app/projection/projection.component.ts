@@ -23,7 +23,7 @@ export class ProjectionComponent implements OnInit {
   ngOnInit(): void {
     this.users = [
       { firstname: 'Roberto', lastname: 'Sequeira', country: 'CR', car: true, motorcicle: true, bicycle: true },
-      { firstname: 'John', lastname: 'Doe', country: 'CR', car: true, motorcicle: true, bicycle: true },
+      { firstname: 'John', lastname: 'Doe', country: 'CR', car: false, motorcicle: false, bicycle: true },
     ];
   }
 

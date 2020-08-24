@@ -1,8 +1,13 @@
 <h1>Projection</h1>
 
 <div *ngFor="let user of users">
-  <app-collapsible [title]="user.firstname + ' ' + user.lastname">
-    <ul>
+  <app-collapsible>
+    <div col-title>
+      {{ user.firstname }} {{ user.lastname }}
+      <span *ngIf="user.motorcicle">🏍️</span>
+    </div>
+
+    <ul col-body>
       <li>Car: {{ user.car ? 'Yes' : 'No' }}</li>
       <li>Motocycle: {{ user.motorcicle ? 'Yes' : 'No' }}</li>
       <li>Bicycle: {{ user.bicycle ? 'Yes' : 'No' }}</li>

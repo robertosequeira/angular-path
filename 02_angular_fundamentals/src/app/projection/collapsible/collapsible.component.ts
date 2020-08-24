@@ -5,14 +5,10 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './collapsible.component.html',
   styleUrls: ['./collapsible.component.scss']
 })
-export class CollapsibleComponent implements OnInit {
-  @Input() title: string;
+export class CollapsibleComponent {
   public visible = false;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
   toggle(): void {
     this.visible = !this.visible;
